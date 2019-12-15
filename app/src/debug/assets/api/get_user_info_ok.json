@@ -1,0 +1,12 @@
+{
+  "error_code": 0,
+  "error_name": "Успешно",
+  "data": {
+    "phone": "9831340202",
+    "sex": null,
+    "hobby": 2,
+    "first_name": "Вова",
+    "last_name": "Жирков",
+    "middle_name": "Эдуардович"
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="key_sex">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+
+    <string-array name="value_sex">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+
+    <integer-array name="key_hobby">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+
+    <string-array name="value_hobby">
+        <item>Автомобили</item>
+        <item>Ароматерапия</item>
+        <item>Бильярд</item>
+        <item>Блоггерство</item>
+        <item>Боулинг</item>
+    </string-array>
+
+</resources>

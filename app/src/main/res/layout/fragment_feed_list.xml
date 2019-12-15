@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.kastapp.sample.ui.common.view.progress.SmartSwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </com.kastapp.sample.ui.common.view.progress.SmartSwipeRefreshLayout>
+
+        <include
+            android:id="@+id/error"
+            layout="@layout/layout_error" />
+
+        <include
+            android:id="@+id/empty"
+            layout="@layout/layout_empty" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialTextInputLayout">
+        <attr name="required" format="boolean" />
+        <attr name="extType" format="enum">
+            <enum name="text" value="0" />
+            <enum name="bank_card" value="1" />
+            <enum name="email" value="2" />
+            <enum name="code" value="3" />
+            <enum name="pass" value="4" />
+            <enum name="new_pass" value="5" />
+            <enum name="repeat_new_pass" value="6" />
+            <enum name="simple_date" value="7" />
+            <enum name="name" value="8" />
+            <enum name="phone" value="9" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MaterialProgressButton">
+        <attr name="progress_text_visibility" format="boolean" />
+        <attr name="progress_lock_ui" format="boolean" />
+        <attr name="progress_radius" format="dimension" />
+    </declare-styleable>
+</resources>

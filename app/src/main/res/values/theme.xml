@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+https://material.io/resources/color/ - быстрая генерация цветовой схемы
+https://material.io/develop/android/theming/color/ - тут описание атрибутов цветовой схемы
+https://material.io/resources/build-a-material-theme/#how-to-using-android-studio - теперь у нас type.xml, shape.xml для создания темы, и еще есть проект андроидовский с примерами
+https://material.io/components/ - описание всех материальных компонентов
+https://material.io/develop/android/docs/getting-started/ - вводная
+https://medium.com/over-engineering/setting-up-a-material-components-theme-for-android-fbf7774da739 - супер полезная статья по поводу нового дизайна
+-->
+<resources>
+
+</resources>

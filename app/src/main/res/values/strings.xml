@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Sample</string>
+
+    <string name="label_nav_header">Android Studio</string>
+    <string name="label_user">Информация о пользователе</string>
+    <string name="label_feed">Лента</string>
+    <string name="label_permission">Разрешения</string>
+    <string name="label_popup_choose_birthday">Выберите дату рождения</string>
+
+    <string name="text_stub_short">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="text_stub_long">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="text_empty">Ничего не найдено</string>
+    <string name="text_popup_data_saved">Данные сохранены</string>
+    <string name="text_popup_removed">Удалено</string>
+    <string name="text_popup_permission_location_rationale">Местоположение просто нужно и все тут</string>
+    <string name="text_popup_permission_location_forever_denied">Предоставьте разрешение на местоположение в настройках</string>
+    <string name="text_popup_permission_camera_rationale">Ну дайте доступ к камере, ну пожалуйста!!!</string>
+    <string name="text_popup_permission_camera_forever_denied">Предоставьте разрешение на камеру в настройках</string>
+
+    <string name="error_open_intent">Ни одного приложения не найдено</string>
+    <string name="error_try_later">Ошибка попробуйте позже</string>
+    <string name="error_check_network">Проверьте интернет подключение</string>
+
+    <string name="error_field_no_blank">Поле не может быть пустым</string>
+    <string name="error_field_pass_min_length">Минимальная длина пароля 6 символов</string>
+    <string name="error_field_pass_mismatch">Пароли не совпадают</string>
+    <string name="error_field_wrong_phone">Некорректный номер телефона</string>
+    <string name="error_field_wrong_email">Некорректный e-mail</string>
+    <string name="error_field_wrong_code">Некорректный код</string>
+    <string name="error_field_wrong_simple_date">Некорректная дата</string>
+    <string name="error_field_wrong_bank_card">Некорректный номер карты</string>
+    <string name="error_field_wrong_name">Минимальная длина 2 символа</string>
+
+    <string name="hint_field_name_symbols">Допустимые символы: кириллица, пробел, дефис</string>
+    <string name="hint_field_pass_symbols">Допустимые символы: латиница, цифры, специальные символы</string>
+    <string name="hint_field_birthday_symbols">Дата в формате дд.мм.гггг</string>
+
+    <string name="hint_field_phone">Номер телефона *</string>
+    <string name="hint_field_first_name">Имя *</string>
+    <string name="hint_field_last_name">Фамилия *</string>
+    <string name="hint_field_middle_name">Отчество *</string>
+    <string name="hint_field_date_birth">Дата рождения *</string>
+    <string name="hint_field_sex">Пол *</string>
+    <string name="hint_field_hobby">Хобби</string>
+
+    <string name="btn_repeat">Повторить</string>
+    <string name="btn_settings">Настройки</string>
+    <string name="btn_understand">Понятно</string>
+    <string name="btn_save">Сохранить</string>
+    <string name="btn_check_location">Местоположение</string>
+    <string name="btn_check_camera">Камера</string>
+    <string name="btn_delete">Удалить</string>
+
+    <string name="mtrl_picker_date_header_unselected" tools:override="true">Укажите дату</string>
+    <string name="mtrl_picker_text_input_date_hint" tools:override="true">Дата</string>
+    <string name="mtrl_picker_text_input_date_format" tools:override="true">dd.MM.yyyy</string>
+    <string name="mtrl_picker_invalid_format" tools:override="true">Неверный формат.\nИспользуйте: %1$s</string>
+    <string name="mtrl_picker_out_of_range" tools:override="true">Вне диапазона: %1$s</string>
+
+</resources>

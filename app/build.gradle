@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.dokka-android'
+apply from: '../lint.gradle'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.kastapp.sample"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "API_URL", '"http://hehe.com"')
+            buildConfigField("String", "DB_NAME", '"release"')
+        }
+        debug {
+            buildConfigField("String", "API_URL", '"http://nehe.com"')
+            buildConfigField("String", "DB_NAME", '"debug"')
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    dokka {
+        outputFormat = 'html'
+        outputDirectory = "$buildDir/javadoc"
+        includes = ['packages.md']
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.reflect
+
+    implementation deps.material
+
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.ktx.core
+    implementation deps.androidx.ktx.sqlite
+    implementation deps.androidx.ktx.navigation_fragment
+    implementation deps.androidx.ktx.navigation_ui
+    implementation deps.androidx.ktx.navigation_runtime
+    implementation deps.androidx.ktx.lifecycle_viewmodel
+    implementation deps.androidx.ktx.prefs
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.lifecycle
+    implementation deps.androidx.swiperefreshlayout
+    implementation deps.androidx.multidex
+    implementation deps.androidx.recyclerview.main
+    implementation deps.androidx.recyclerview.selection
+
+    kapt deps.glide.compiler
+    implementation deps.glide.main
+
+    implementation deps.timber
+
+    implementation deps.play_services.location
+    implementation deps.play_services.map_utils
+
+    kapt deps.room.compiler
+    implementation deps.room.main
+    implementation deps.room.ktx
+    implementation deps.room.rxjava2
+
+    implementation deps.rx.java
+    implementation deps.rx.kotlin
+    implementation deps.rx.android
+
+    implementation deps.retrofit.adapter
+    implementation deps.retrofit.gson
+    implementation deps.retrofit.logging
+
+    implementation deps.koin.android
+    implementation deps.koin.viewmodel
+
+    implementation deps.paging
+
+    implementation deps.test.restmock
+
+    testImplementation deps.test.junit
+    testImplementation deps.test.robolectric
+    testImplementation deps.test.mockito.kotlin
+    testImplementation deps.test.mockito.inline
+    testImplementation deps.test.room
+
+    androidTestImplementation deps.test.restmock
+    androidTestImplementation deps.test.ext
+    androidTestImplementation deps.test.espresso
+    androidTestImplementation deps.test.core
+}

@@ -1,0 +1,132 @@
+buildscript {
+    ext {
+        /*следить за обновлениями можно через Project Structure->Suggestions*/
+        versions = [
+                'kotlin'                 : '1.3.61',
+                'room'                   : '2.2.3',
+                'koin'                   : '2.0.1',
+                'dokka'                  : '0.9.17',
+                'ktx_core'               : '1.2.0-rc01',
+                'ktx_navigation'         : '2.2.0',
+                'ktx_lifecycle_viewmodel': '2.2.0',
+                'ktx_prefs'              : '1.1.0',
+                'ktx_sqlite'             : '2.1.0',
+                'appcompat'              : '1.1.0',
+                'constraintlayout'       : '1.1.3',
+                'multidex'               : '2.0.1',
+                'lifecycle'              : '2.2.0',
+                'swiperefreshlayout'     : '1.1.0-alpha03',
+                'recyclerview_main'      : '1.1.0',
+                'recyclerview_selection' : '1.1.0-beta01',
+                'material'               : '1.2.0-alpha04',
+                'glide'                  : '4.11.0',
+                'paging'                 : '2.1.1',
+                'play_services_location' : '17.0.0',
+                'play_services_map_utils': '0.6.2',
+                'timber'                 : '4.7.1',
+                'rx_java'                : '2.2.15',
+                'rx_kotlin'              : '2.4.0',
+                'rx_android'             : '2.1.1',
+                'retrofit'               : '2.7.1',
+                'retrofit_logging'       : '4.3.1',
+                'test_junit'             : '4.13',
+                'test_ext'               : '1.1.1',
+                'test_espresso'          : '3.2.0',
+                'test_robolectric'       : '4.3.1',
+                'test_mockito_kotlin'    : '2.2.0',
+                'test_mockito_inline'    : '3.2.0',
+                'test_core'              : '2.1.0',
+                'test_restmock'          : '0.4.1',
+        ]
+        deps = [
+                'kotlin'       : [
+                        'stdlib' : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+                        'reflect': "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin"
+                ],
+                'androidx'     : [
+                        'appcompat'         : "androidx.appcompat:appcompat:$versions.appcompat",
+                        'ktx'               : [
+                                'core'               : "androidx.core:core-ktx:$versions.ktx_core",
+                                'navigation_runtime' : "androidx.navigation:navigation-runtime-ktx:$versions.ktx_navigation",
+                                'navigation_ui'      : "androidx.navigation:navigation-ui-ktx:$versions.ktx_navigation",
+                                'navigation_fragment': "androidx.navigation:navigation-fragment-ktx:$versions.ktx_navigation",
+                                'lifecycle_viewmodel': "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.ktx_lifecycle_viewmodel",
+                                'sqlite'             : "androidx.sqlite:sqlite-ktx:$versions.ktx_sqlite",
+                                'prefs'              : "androidx.preference:preference-ktx:$versions.ktx_prefs"],
+                        'constraintlayout'  : "androidx.constraintlayout:constraintlayout:$versions.constraintlayout",
+                        'multidex'          : "androidx.multidex:multidex:$versions.multidex",
+                        'lifecycle'         : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
+                        'swiperefreshlayout': "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swiperefreshlayout",
+                        'recyclerview'      : [
+                                'main'     : "androidx.recyclerview:recyclerview:$versions.recyclerview_main",
+                                'selection': "androidx.recyclerview:recyclerview-selection:$versions.recyclerview_selection"
+                        ]
+                ],
+                'material'     : "com.google.android.material:material:$versions.material",
+                'glide'        : [
+                        'compiler': "com.github.bumptech.glide:compiler:$versions.glide",
+                        'main'    : "com.github.bumptech.glide:glide:$versions.glide"
+                ],
+                'play_services': [
+                        'location' : "com.google.android.gms:play-services-location:$versions.play_services_location",
+                        'map_utils': "com.google.maps.android:android-maps-utils:$versions.play_services_map_utils"
+                ],
+                'timber'       : "com.jakewharton.timber:timber:$versions.timber",
+                'room'         : [
+                        'compiler': "androidx.room:room-compiler:$versions.room",
+                        'main'    : "androidx.room:room-runtime:$versions.room",
+                        'ktx'     : "androidx.room:room-ktx:$versions.room",
+                        'rxjava2' : "androidx.room:room-rxjava2:$versions.room"
+                ],
+                'rx'           : [
+                        'java'   : "io.reactivex.rxjava2:rxjava:$versions.rx_java",
+                        'kotlin' : "io.reactivex.rxjava2:rxkotlin:$versions.rx_kotlin",
+                        'android': "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+                ],
+                'retrofit'     : [
+                        'adapter': "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+                        'gson'   : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+                        'logging': "com.squareup.okhttp3:logging-interceptor:$versions.retrofit_logging"
+                ],
+                'koin'         : [
+                        'android'  : "org.koin:koin-android:$versions.koin",
+                        'viewmodel': "org.koin:koin-androidx-viewmodel:$versions.koin",
+                ],
+                'paging'       : "androidx.paging:paging-runtime:$versions.paging",
+                'test'         : [
+                        'junit'      : "junit:junit:$versions.test_junit",
+                        'ext'        : "androidx.test.ext:junit:$versions.test_ext",
+                        'espresso'   : "androidx.test.espresso:espresso-core:$versions.test_espresso",
+                        'robolectric': "org.robolectric:robolectric:$versions.test_robolectric",
+                        'mockito'    : [
+                                'kotlin': "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.test_mockito_kotlin",
+                                'inline': "org.mockito:mockito-inline:$versions.test_mockito_inline"
+                        ],
+                        'room'       : "androidx.room:room-testing:$versions.room",
+                        'core'       : "androidx.arch.core:core-testing:$versions.test_core",
+                        'restmock'   : "com.github.andrzejchm.RESTMock:android:$versions.test_restmock"
+                ]
+        ]
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:$versions.dokka"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

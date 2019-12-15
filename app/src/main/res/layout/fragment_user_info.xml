@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="java.util.List" />
+
+        <import type="com.kastapp.sample.data.model.KeyValue" />
+
+        <variable
+            name="sexArr"
+            type="List&lt;KeyValue&lt;Integer>>" />
+
+        <variable
+            name="hobbyArr"
+            type="List&lt;KeyValue&lt;Integer>>" />
+
+        <variable
+            name="info"
+            type="com.kastapp.sample.data.model.UserInfo" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout
+                    android:id="@+id/phone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/hint_field_phone"
+                    app:endIconMode="clear_text"
+                    app:errorEnabled="true"
+                    app:extType="phone"
+                    app:formattedText="@{info.phone}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:prefixText="+7"
+                    app:required="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLength="16" />
+
+                </com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout>
+
+                <com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout
+                    android:id="@+id/first_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/hint_field_first_name"
+                    app:endIconMode="clear_text"
+                    app:errorEnabled="true"
+                    app:extType="name"
+                    app:formattedText="@{info.firstName}"
+                    app:helperText="@string/hint_field_name_symbols"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phone"
+                    app:required="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapWords" />
+
+                </com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout>
+
+                <com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout
+                    android:id="@+id/last_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/hint_field_last_name"
+                    app:endIconMode="clear_text"
+                    app:errorEnabled="true"
+                    app:extType="name"
+                    app:formattedText="@{info.lastName}"
+                    app:helperText="@string/hint_field_name_symbols"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/first_name"
+                    app:required="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapWords" />
+
+                </com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout>
+
+                <com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout
+                    android:id="@+id/middle_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/hint_field_middle_name"
+                    app:endIconMode="clear_text"
+                    app:errorEnabled="true"
+                    app:extType="name"
+                    app:formattedText="@{info.middleName}"
+                    app:helperText="@string/hint_field_name_symbols"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/last_name"
+                    app:required="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapWords" />
+
+                </com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout>
+
+                <com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout
+                    android:id="@+id/birthday"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/hint_field_date_birth"
+                    app:endIconDrawable="@drawable/ic_calendar_today_24px"
+                    app:endIconMode="custom"
+                    app:errorEnabled="true"
+                    app:extType="simple_date"
+                    app:helperText="@string/hint_field_birthday_symbols"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/middle_name"
+                    app:required="true"
+                    app:simpleDate="@{info.birthday}">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:maxLength="10" />
+
+                </com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout>
+
+                <com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout
+                    android:id="@+id/sex"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/hint_field_sex"
+                    app:errorEnabled="true"
+                    app:extType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/birthday"
+                    app:required="true">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        app:key="@{info.sex}"
+                        app:keyValArr="@{sexArr}" />
+
+                </com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout>
+
+                <com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout
+                    android:id="@+id/hobby"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/hint_field_hobby"
+                    app:extType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sex"
+                    app:required="false">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        app:key="@{info.hobby}"
+                        app:keyValArr="@{hobbyArr}" />
+
+                </com.kastapp.sample.ui.common.view.textinput.MaterialTextInputLayout>
+
+                <com.kastapp.sample.ui.common.view.progress.button.MaterialProgressButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/btn_save"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hobby"
+                    app:progress_lock_ui="true"
+                    app:progress_radius="9dp"
+                    app:progress_text_visibility="false" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_save" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/layout_progress"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/error"
+            layout="@layout/layout_error"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</layout>
